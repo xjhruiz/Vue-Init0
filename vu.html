@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="vu primeros pasos">
+    <!-- versiones @3.0.3 -->
+    <script src="https://unpkg.com/vue@3.0.3/dist/vue.global.prod.js"></script>
+    <!-- desarrollo -->
+    <!-- <script src="https://unpkg.com/vue@3.0.3/dist/vue.global.js"></script> -->
+    <title>vu</title>
+</head>
+
+<body>
+    <!-- Forma de mostrar variables utiliza un motor de plantillas -->
+    <div id="app">{{saludo}}</div>
+
+    <script>
+        // crea la app
+        const app = Vue.createApp({
+            //metodo necesario para enviar datos
+            data() {
+                //variable que devolvera el método
+                return {
+                    //valor de la variable
+                    saludo: 'Hola  mundo front vue'
+                }
+            },
+        });
+        //donde se monstrará la variable
+        app.mount('#app');
+
+        // document.getElementById('app').innerHTML = "Hola mundo desde js";
+    </script>
+</body>
+
+</html>
