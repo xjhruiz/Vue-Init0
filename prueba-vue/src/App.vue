@@ -99,8 +99,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2b5a8a;
+  color: #29629b;
   background: whitesmoke;
-  margin-top: 60px;
+  margin: 1rem 3rem;
+  padding: 2rem;
 }
 </style>
