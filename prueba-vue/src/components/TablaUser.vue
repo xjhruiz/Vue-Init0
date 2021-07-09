@@ -17,6 +17,7 @@
           <td>{{ usuario.apellido }}</td>
           <td>{{ usuario.email }}</td>
           <td>{{ usuario.edad }}</td>
+          <td><button class="btn btn-danger">🗑️ Eliminar</button></td>
         </tr>
       </tbody>
     </table>
