@@ -12,9 +12,13 @@
     y le asocio otro evento donde guardo los datos 
     tiene que llamarse igual los eventos
     -->
+    <!-- Se recibe el evento declarado en la tablaUser y se llama a un evento que se definira en la app -->
     <formulario-usuarios @add-usuario="agregarUsuario" />
-    <tabla-user :usuarios="usuarios" />
+    <tabla-user :usuarios="usuarios" @eliminar-usuario="eliminarUsuario" @actualizar-usuario="actualizarUsuario"/>
   </div>
+  <!-- Mensaje para comprobar que no hay ningun usuario agregado (el array de usuario esta vacio) -->
+  <!-- v-if sentencia condicional se muestra el mensaje cuando usuarios = 0 -->
+  <div v-if="!usuarios.length">No se han agredado usuarios</div>
 </template>
 
 <script>
@@ -89,6 +93,17 @@ export default {
       //añadimos con el operador spread las propiedades del usuario, mas el id generado
       this.usuarios = [...this.usuarios, { ...usuario, id }];
     },
+    // defino el evento que recibo del componente tablaUser como lo he llamado en @eliminar-usuario
+    //de los usuarios del array de data() filtrame y devuelveme todos menos el de id ?
+    eliminarUsuario(id){
+      // filter, reduce, map, every, some, find, include ... metodos para programacion funcional
+      this.usuarios = this.usuarios.filter( usuario => usuario.id !== id);
+    },
+    actualizarUsuario(id, usuarioActualizado){
+      //recorro el array de usuarios, y compruebo si el usuario elemento que recorro 
+      //es igual al id que le paso si lo es le pongo el usuarioActualizado si no le pongo el mismo usuario 
+      this.usuarios = this.usuarios.map(usuario => usuario.id==id ? usuarioActualizado : usuario);
+    }
   },
 };
 </script>
