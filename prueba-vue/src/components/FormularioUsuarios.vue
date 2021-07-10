@@ -184,9 +184,12 @@ export default {
     },
     validarEdad() {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       console.log(this.usuario.edad);
       return this.usuario.edad < 1; 
 =======
+=======
+>>>>>>> Stashed changes
       // console.log(this.usuario.edad);
       return this.usuario.edad < 1;
 >>>>>>> Stashed changes
