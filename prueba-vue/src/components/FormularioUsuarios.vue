@@ -183,16 +183,10 @@ export default {
       return this.usuario.email.length < 1;
     },
     validarEdad() {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
       console.log(this.usuario.edad);
       return this.usuario.edad < 1; 
-=======
-=======
->>>>>>> Stashed changes
       // console.log(this.usuario.edad);
       return this.usuario.edad < 1;
->>>>>>> Stashed changes
     },
   },
 };
