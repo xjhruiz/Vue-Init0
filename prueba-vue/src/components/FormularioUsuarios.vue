@@ -183,8 +183,6 @@ export default {
       return this.usuario.email.length < 1;
     },
     validarEdad() {
-      console.log(this.usuario.edad);
-      return this.usuario.edad < 1; 
       // console.log(this.usuario.edad);
       return this.usuario.edad < 1;
     },
