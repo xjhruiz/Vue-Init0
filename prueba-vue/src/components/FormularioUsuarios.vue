@@ -184,7 +184,7 @@ export default {
     },
     validarEdad() {
       console.log(this.usuario.edad);
-      return this.usuario.edad < 1;
+      return this.usuario.edad < 1; 
     },
   },
 };
