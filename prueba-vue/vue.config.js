@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: "/Vue-Init0/prueba-vue/",
+  publicPath: "/prueba-vue/",
 };
